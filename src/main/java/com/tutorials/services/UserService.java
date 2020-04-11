@@ -15,4 +15,5 @@ public interface UserService {
     UserModel updateUser(String userId, UserModel userRq);
 
     Boolean deleteUser(String userId);
+
 }

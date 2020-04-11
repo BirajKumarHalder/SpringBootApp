@@ -4,6 +4,7 @@ import com.tutorials.controllers.api.UserApi;
 import com.tutorials.models.UserModel;
 import com.tutorials.services.impls.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;

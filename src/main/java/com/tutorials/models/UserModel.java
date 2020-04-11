@@ -6,6 +6,7 @@ import lombok.ToString;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
+import java.util.List;
 
 @Getter
 @Setter
@@ -24,5 +25,9 @@ public class UserModel {
     private String userEmail;
     @NotNull
     private String userContact;
+
+    private CartModel cart;
+
+    private List<CardModel> cards;
 
 }
