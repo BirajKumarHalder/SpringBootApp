@@ -36,7 +36,7 @@ public class SpringBootApp implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        cartRepository.deleteAll();
+        /*cartRepository.deleteAll();
         userRepository.deleteAll();
         cardRepository.deleteAll();
         productRepository.deleteAll();
@@ -82,11 +82,7 @@ public class SpringBootApp implements CommandLineRunner {
         System.out.println("running queries----------> 13");
         List<ProductEntity> productsForCart2 = Arrays.asList(productEntity2);
         cartEntity2.setProducts(productsForCart2);
-        cartRepository.save(cartEntity2);
-        System.out.println("running queries----------> 14");
-        List<ProductEntity> productsForCart3 = Arrays.asList(productEntity3);
-        cartEntity2.setProducts(productsForCart3);
-        cartRepository.save(cartEntity2);
+        cartRepository.save(cartEntity2);*/
     }
 
     @Bean

@@ -1,6 +1,7 @@
 package com.tutorials.advices;
 
 import com.tutorials.models.ErrorModel;
+import io.jsonwebtoken.JwtException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MethodArgumentNotValidException;
@@ -15,8 +16,15 @@ public class ApplicationExceptionHandler {
         ErrorModel error = new ErrorModel();
         error.setErrorCode("400");
         error.setErrorMessage(exception.getMessage());
-        System.out.println(error.getErrorMessage());
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(error);
+    }
+
+    @ExceptionHandler(value = JwtException.class)
+    public ResponseEntity<ErrorModel> handelJwtException(JwtException exception) {
+        ErrorModel error = new ErrorModel();
+        error.setErrorCode("403");
+        error.setErrorMessage(exception.getMessage());
+        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(error);
     }
 
     @ExceptionHandler(value = Exception.class)
